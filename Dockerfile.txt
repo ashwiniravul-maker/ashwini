@@ -1,7 +1,0 @@
-FROM Alpine:latest
-RUN apk update && \
-    apk add --no-cache openjdk17 bash
-WORKDIR /opt/ashwinid
-COPY target/*.jar /opt/ashwinid
-EXPOSE 8081
-ENTRYPOINT ["java", "-jar", "com.jagade-0.0.1-SNAPSHOT.jar"]
